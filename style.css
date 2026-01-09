@@ -292,6 +292,14 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
+  background: linear-gradient(90deg, #149afb -30.22%, #13ef95 78.93%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .services-container {
@@ -477,13 +485,142 @@ h4 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* Container to provide the dark background and spacing */
+.cta-wrapper {
+  position: absolute;
+  top: 420%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%,-50%);
+    background-color: #05070c; /* Deep dark background */
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Main Card */
+.cta-card {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background: #0d1117; /* Card internal color */
+    padding: 70px 40px;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Gradient Border logic */
+.cta-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px; 
+    padding: 1.5px; /* Border thickness */
+    background: linear-gradient(to right, #149afb, #13ef95); /* Blue to Green gradient */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+/* Typography */
+.cta-heading {
+  background: linear-gradient(90deg, #149afb -30.22%, #13ef95 78.93%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.cta-subtext {
+    font-size: 1.1rem;
+    color: #b5b9c6;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons Container */
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Shared Button Styles */
+.cta-buttons a {
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* White Button */
+.btn-signup {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-signup:hover {
+    background-color: #e2e2e2;
+    transform: translateY(-2px);
+}
+
+/* Dark/Border Button */
+.btn-demo {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #30363d;
+}
+
+.btn-demo:hover {
+    border-color: #13ef95;
+    background-color: rgba(19, 239, 149, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-card {
+        padding: 60px 20px;
+    }
+    
+    .cta-heading {
+        font-size: 2rem;
+    }
+
+    .cta-subtext br {
+        display: none; /* Removes forced line breaks on small screens */
+    }
+}
+
+
 .footer-container {
     background-color: #1a1a1a;
     color: #ffffff;
     padding: 60px 20px 20px;
     font-family: 'Arial', sans-serif;
     position: absolute;
-    top: 400%;
+    top: 600%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
@@ -550,4 +687,78 @@ h4 {
     color: #888;
     margin-left: 20px;
     text-decoration: none;
+}
+
+
+.testimonials {
+  position: absolute;
+  top: 490%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 100px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #cfd8dc;
+  margin-bottom: 60px;
+}
+
+/* MARQUEE */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+/* CARD */
+.card {
+  min-width: 420px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 28px;
+  text-align: left;
+  backdrop-filter: blur(6px);
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.author span {
+  font-weight: 600;
+}
+
+.author small {
+  display: block;
+  color: #9e9e9e;
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+/* ANIMATION */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
