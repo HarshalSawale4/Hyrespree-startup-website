@@ -100,6 +100,9 @@ body {
 #hero1 {
   font-size: 50px;
   background: linear-gradient(90deg, #149afb -30.22%, #13ef95 78.93%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -329,4 +332,222 @@ body {
 
 .service-link:hover {
   text-decoration: underline;
+}
+
+/* ================= Contact section ================= */
+
+
+.contact-section{
+  position: absolute;
+  top: 275%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px;
+}
+
+.left-sec h6{
+  font-size: 20px;
+  
+}
+
+.left-sec p{
+  margin-bottom: 30px;
+  
+}
+
+.left-sec{
+  height: 400px;
+  color: rgb(255, 254, 254);
+}
+.right-sec{
+  width: 40%;
+  text-align: center;
+  
+  
+}
+
+.form{
+  background-color: cyan;
+  height: 400px;
+  width: 400px;
+}
+.form-wrapper {
+  max-width: 820px;
+  width: 100%;
+}
+
+.contact-form {
+  background: radial-gradient(circle at top, #0c1424, #05070c);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+input,
+textarea {
+  background: #0a0d14;
+  border: 1px solid #2a2f3a;
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: #fff;
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  margin-top: 20px;
+  resize: none;
+}
+
+h4 {
+  margin: 24px 0 14px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chip {
+  background: transparent;
+  border: 1px solid #3a3f4b;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chip:hover,
+.chip.active {
+  background: #111827;
+  border-color: #3b82f6;
+}
+
+.policy {
+  font-size: 12px;
+  margin: 16px 0 22px;
+  color: #b5b9c6;
+}
+
+.policy a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  
+  /* The Gradient Background */
+  background: white;
+  color: #000;
+            
+            /* The Animation Property */
+  transition: all 0.3s ease;
+
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #149afb -30.22%, #13ef95 78.93%); /* Shifts to solid white */
+  color: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 20px 20px;
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 400%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col p {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #007bff; /* HyreSpree Blue */
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.footer-legal a {
+    color: #888;
+    margin-left: 20px;
+    text-decoration: none;
 }
