@@ -139,30 +139,22 @@
 
   <div class="right-sec">
      <div class="form-wrapper">
-  <form class="contact-form">
+  <form action="submit_form.php" method="POST" class="contact-form">
 
-    <div class="grid-2">
-      <input type="text" placeholder="First Name*" required>
-      <input type="text" placeholder="Last Name*" required>
+  <input type="text" name="first_name" placeholder="First Name*" required>
+  <input type="text" name="last_name" placeholder="Last Name*" required>
 
-      <input type="email" placeholder="Email*" required>
-      <input type="tel" placeholder="Phone Number*" required>
+  <input type="email" name="email" placeholder="Email*" required>
+  <input type="tel" name="phone" placeholder="Phone Number*" required>
 
-      <input type="text" placeholder="Job Title*" required>
-      <input type="text" placeholder="Company Name*" required>
-    </div>
+  <input type="text" name="job_title" placeholder="Job Title*" required>
+  <input type="text" name="company" placeholder="Company Name*" required>
 
-    <h4>Write your Doubt if any*</h4>
-    
-    <textarea placeholder="How can we help?*" required></textarea>
+  <textarea name="message" placeholder="How can we help?*" required></textarea>
 
-    <p class="policy">
-      By continuing, you agree to our <a href="#">Privacy Policy</a> and consent to receive communications from us.
-    </p>
+  <button type="submit">Submit</button>
+</form>
 
-    <button type="submit" class="submit-btn">Submit</button>
-
-  </form>
 </div>
   </div>
 </div>
