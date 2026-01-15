@@ -65,6 +65,7 @@ tr{border-bottom:1px solid #1f2937}
     <a>Contact Leads</a>
     <a>Blog</a>
     <a href="faq_admin.php">FAQ'S</a>
+    <a href="add_testimonial.php">Emp Review</a>
   </nav>
 </aside>
 

@@ -50,7 +50,7 @@
       </p>
     </div>
 
-    <section class="talent-section">
+<section class="talent-section">
   <h2>Why Choose HyreSpree</h2>
 
   <div class="slider">
@@ -85,7 +85,7 @@
   </ul>
   </div>
   <div class="right-content">
-    <img src="/assets/26081-1-scaled-removebg-preview.png" alt="img">
+    <img src="../Hyrespree-startup-website\assets\26081-1-scaled-removebg-preview.png" alt="img">
   </div>
 </div>
 
@@ -178,77 +178,81 @@
 
 
 <section class="testimonials">
-  <h2>Trusted by startups and enterprises</h2>
-  <p class="subtitle">
-    Discover the power of our product through real stories.
-  </p>
+  <h2>Trusted by Employees Reviews</h2>
+  <p class="subtitle">Discover the power of our product through real stories.</p>
 
   <div class="marquee">
     <div class="marquee-track">
+      <?php
+      require_once('db.php');
+      $query = "SELECT * FROM testimonials ORDER BY id DESC";
+      $result = mysqli_query($conn, $query);
+      $reviews = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-      <!-- CARD 1 -->
-      <div class="card">
-        <p>
-          I have not had such a nice experience working with somebody's API in so long.
-          And Deepgram did that. And then I also realized, like, it's cheap as hell.
-        </p>
-        <div class="author">
-          <span>Wes Bos</span>
-          <small>Dev Influencer, Syntax Podcast</small>
-        </div>
-      </div>
+      // Function to display formatted cards
+      function displayCards($data) {
+          foreach ($data as $row) {
+              echo '
+              <div class="card">
+                <div class="card-content">
+                    <p class="review-text">"' . htmlspecialchars($row['review']) . '"</p>
+                </div>
+                <div class="author">
+                  <span class="author-name">' . htmlspecialchars($row['name']) . '</span>
+                  <small class="author-role">' . htmlspecialchars($row['role']) . '</small>
+                </div>
+              </div>';
+          }
+      }
 
-      <!-- CARD 2 -->
-      <div class="card">
-        <p>
-          Not only is Deepgram’s technology the most advanced we found, but working with
-          them has been an absolute pleasure.
-        </p>
-        <div class="author">
-          <span>Craig Akal</span>
-          <small>Co-founder, Elerian AI</small>
-        </div>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="card">
-        <p>
-          The quality of your transcript determines the quality of the information you
-          can extract from its text.
-        </p>
-        <div class="author">
-          <span>Scott Hoch</span>
-          <small>Head of Data, Revenue.io</small>
-        </div>
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="card">
-        <p>
-          IT teams love Deepgram’s speed and appreciate how the same open-source space
-          reduces total cost.
-        </p>
-        <div class="author">
-          <span>Pete Ellis</span>
-          <small>CPO, Red Box</small>
-        </div>
-      </div>
-
-      <!-- DUPLICATE FOR SMOOTH LOOP -->
-      <div class="card">
-        <p>
-          I have not had such a nice experience working with somebody's API in so long.
-          And Deepgram did that.
-        </p>
-        <div class="author">
-          <span>Wes Bos</span>
-          <small>Syntax Podcast</small>
-        </div>
-      </div>
-
+      if (!empty($reviews)) {
+          displayCards($reviews);
+          // Only duplicate if there are enough reviews to fill the screen
+          // This prevents the "2 cards" issue when you only have 1 review
+          if (count($reviews) > 1) {
+              displayCards($reviews);
+          }
+      } else {
+          echo "<p class='no-data'>No reviews available at the moment.</p>";
+      }
+      ?>
     </div>
   </div>
 </section>
+
+<section class="faq-container">
+  <div class="faq-header">
+    <span class="faq-badge">FAQs</span>
+    <h2>Frequently Asked Questions</h2>
+    <p>Everything you need to know about hiring & talent with HyreSpree</p>
+  </div>
+
+  <div class="faq-list">
+    <?php
+    require_once('db.php');
+    $sql = "SELECT * FROM faqs ORDER BY id DESC";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0):
+      while ($row = mysqli_fetch_assoc($result)): ?>
+        <div class="faq-card">
+          <button class="faq-question" aria-expanded="false">
+            <span><?= htmlspecialchars($row['question']); ?></span>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24">
+              <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p><?= htmlspecialchars($row['answer']); ?></p>
+          </div>
+        </div>
+      <?php endwhile;
+    else: ?>
+      <p class="faq-empty">No questions available yet.</p>
+    <?php endif; ?>
+  </div>
+</section>
+
 
 
   </main>
@@ -308,5 +312,26 @@
 
   </footer>
 
+  <script>
+ 
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.parentElement;
+      const open = document.querySelector('.faq-card.active');
+
+      if (open && open !== card) {
+        open.classList.remove('active');
+        open.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      }
+
+      card.classList.toggle('active');
+      button.setAttribute(
+        'aria-expanded',
+        card.classList.contains('active')
+      );
+    });
+  });
+
+  </script>
 </body>
 </html>
