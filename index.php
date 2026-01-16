@@ -9,6 +9,7 @@
   <meta name="description" content="Discover why Hyrespree is trusted by startups and enterprises. Read real stories and testimonials from industry leaders about the power of our advanced technology.">
   
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=<?php echo filemtime('style.css'); ?>">
 </head>
 <body>
 
@@ -50,6 +51,7 @@
       </p>
     </div>
 
+
 <section class="talent-section">
   <h2>Why Choose HyreSpree</h2>
 
@@ -74,6 +76,11 @@
     </div>
   </div>
 </section>
+
+<br>
+<br>
+<br>  
+<br>
 
 
 <div class="section-container">
@@ -171,7 +178,7 @@
 
         <div class="cta-buttons">
 
-            <a href="#" class="btn-demo">Get A Demo</a>
+            <a href="admin/booking.php" class="btn-demo" target="_blank" rel="noopener noreferrer">Book Now</a>
         </div>
     </div>
 </section>
@@ -333,5 +340,9 @@
   });
 
   </script>
+  
+<script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/01/15/17/20260115175252-XUIPWZAV.js" defer></script>
+    
 </body>
 </html>
