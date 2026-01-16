@@ -148,9 +148,13 @@ td {
     <aside class="sidebar">
         <h1 class="brand">HyreSpree Admin</h1>
         <nav>
-            <a href="#">Dashboard</a>
-            <a href="#">Users</a>
-            <a href="#" class="active">Testimonials</a>
+    <a href="admin.php" class="active">Dashboard</a>
+    <a href="user.php">Users </a>
+    <a href="recruiters.php" > Recruiters</a>
+    
+    <a href="faq_admin.php">FAQ'S</a>
+    <a href="add_testimonial.php">Emp Review</a>
+    <a href="booking_admin.php">Booking Request</a>
         </nav>
     </aside>
 

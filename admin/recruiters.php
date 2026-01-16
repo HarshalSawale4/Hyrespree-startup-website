@@ -85,9 +85,13 @@ $result = mysqli_query($conn, "SELECT * FROM recruiters ORDER BY id DESC");
 <aside class="sidebar">
     <div class="logo">HyreSpree Admin</div>
     <nav class="menu">
-        <a href="admin.php">Dashboard</a>
-        <a href="user.php">Users</a>
-        <a href="recruiters.php" class="active">Recruiters</a>
+    <a href="admin.php" class="active">Dashboard</a>
+    <a href="user.php">Users </a>
+    <a href="recruiters.php" > Recruiters</a>
+    
+    <a href="faq_admin.php">FAQ'S</a>
+    <a href="add_testimonial.php">Emp Review</a>
+    <a href="booking_admin.php">Booking Request</a>
     </nav>
 </aside>
 

@@ -160,15 +160,13 @@ $result = $conn->query("SELECT * FROM bookings ORDER BY created_at DESC");
     <div class="sidebar">
         <h2>HyreSpree Admin</h2>
         <nav>
-            <a href="#">Dashboard</a>
-            <a href="#">Users</a>
-            <a href="#">Recruiters</a>
-            <a href="#">Jobs</a>
-            <a href="#">Contact Leads</a>
-            <a href="#">Blog</a>
-            <a href="#">FAQ'S</a>
-            <a href="#">Emp Review</a>
-            <a href="#" class="active">Booking Request</a>
+    <a href="admin.php" class="active">Dashboard</a>
+    <a href="user.php">Users </a>
+    <a href="recruiters.php" > Recruiters</a>
+    
+    <a href="faq_admin.php">FAQ'S</a>
+    <a href="add_testimonial.php">Emp Review</a>
+    <a href="booking_admin.php">Booking Request</a>
         </nav>
     </div>
 

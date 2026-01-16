@@ -34,11 +34,13 @@ $result = mysqli_query($conn, "SELECT first_name, last_name, email, company FROM
 <aside class="sidebar">
     <div class="logo">HyreSpree Admin</div>
     <nav class="menu">
-        <a href="admin.php">Dashboard</a>
-        <a href="user.php" class="active">Users</a>
-        <a href="recruiters.php">Recruiters</a>
-        <a href="jobs.php">Jobs</a>
-        <a href="contacts.php">Contact Leads</a>
+    <a href="admin.php" class="active">Dashboard</a>
+    <a href="user.php">Users </a>
+    <a href="recruiters.php" > Recruiters</a>
+    
+    <a href="faq_admin.php">FAQ'S</a>
+    <a href="add_testimonial.php">Emp Review</a>
+    <a href="booking_admin.php">Booking Request</a>
     </nav>
 </aside>
 

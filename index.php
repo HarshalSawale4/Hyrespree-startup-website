@@ -16,22 +16,24 @@
   <nav class="nav">
 
     <div id="logo">
-      <p>Logo</p>
+      <img src="assets\cropped-HS_Logo_1.png" height="70px" width="200px" alt="logo">
     </div>
 
 
     <!-- Menu -->
     <div id="compo">
-      <p>HyreSpree</p>
-      <p>Our Story</p>
-      <p>Services</p>
-      <p>Contact Us</p>
-      <p>FAQ</p>
+      <p><a href="#home">HyreSpree</a></p>
+      <p><a href="#about">Our Story</a></p>
+      <p><a href="#service">Services</a></p>
+      <p><a href="#contact">Contact Us</a></p>
+      <p><a href="#faq">FAQ</a></p>
     </div>
 
     <!-- Buttons -->
     <div class="but">
-      <button class="btn">Contact Us</button>
+     <a href="#contact">
+  <button class="btn">Contact Us</button>
+</a>
     </div>
 
   </nav>
@@ -83,20 +85,60 @@
 <br>
 
 
-<div class="section-container">
+<div id="about" class="section-container">
   <div class="left-content">
     <ul>
     <li>We have an in-depth understanding of your company’s work culture and the opportunities for advancement available for successful hires, and we will represent you when speaking with prospective candidates.</li>
     <li>We leverage social media and other network-building platforms, as well as a variety of other media, to source qualified candidates.</li>
     <li>We have built a strong network and have a stable internal database of prospective candidates over the last decade, which includes not only active job seekers from the top brand portals but also passive candidates.</li>
   </ul>
+ 
+  <div class="left-img">
+  <img src="assets\HS-1024x762.png" height="230px" width="450px" alt="">
+  </div>
   </div>
   <div class="right-content">
     <img src="../Hyrespree-startup-website\assets\26081-1-scaled-removebg-preview.png" alt="img">
+    <br>
+    <br>
+    <ul>
+    <li>With vast recruitment experience spanning two decades, we have encountered many obstacles that have served as valuable learning opportunities. Recruitment industry issues such as a lack of unified recruitment technology, outdated software.</li>
+    <li>inefficient talent sourcing, and a poor employer brand contribute to making the hiring process arduous and time-consuming.</li>
+    <li>The intent of HyreSpree was to offer a hassle-free recruitment platform, connect recruiters and job seekers, and solve the problems that arise from this gap.</li>
+    </ul>
+
+    <div class="left-sec2">
+      <img src="assets/42426-scaled-removebg-preview.png" height="230px" width="450px" alt="" >
+    </div>
   </div>
 </div>
 
-<section class="services-section">
+<div class="left-section2">
+  <h2>Hyrespree Advantage</h2>
+  <p class="intro">
+    Our skilled and experienced managers are adept at finding the right talent.
+    We stand out for these reasons:
+  </p>
+
+  <ul>
+    <li>
+      Accurate job description and HR skillset mapping.
+      Providing early joiners to eliminate lengthy waiting periods.
+    </li>
+    <li>
+      Screening and filtering of candidate profiles on multiple levels,
+      saving your valuable time.
+    </li>
+    <li>Effective evaluation of soft skills.</li>
+    <li>
+      Maintaining a positive relationship with candidates and ensuring
+      successful recruitment.
+    </li>
+  </ul>
+</div>
+
+
+<section id="service" class="services-section">
   <h2 class="section-title">Our Services</h2>
 
   <div class="services-container">
@@ -131,6 +173,8 @@
 
   </div>
 </section>
+
+<section id="contact">
 <div class="contact-section">
 
   <div class="left-sec">
@@ -165,6 +209,8 @@
 </div>
   </div>
 </div>
+
+</section>
 
 
 <section class="cta-wrapper">
@@ -227,7 +273,7 @@
   </div>
 </section>
 
-<section class="faq-container">
+<section id="faq" class="faq-container">
   <div class="faq-header">
     <span class="faq-badge">FAQs</span>
     <h2>Frequently Asked Questions</h2>

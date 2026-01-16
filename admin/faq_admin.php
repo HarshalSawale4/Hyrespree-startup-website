@@ -50,10 +50,13 @@ $faqs = mysqli_query($conn, "SELECT * FROM faqs ORDER BY id DESC");
     <aside class="sidebar">
         <div class="logo" style="font-weight:700; color:#22d3ee; margin-bottom:30px">HyreSpree Admin</div>
         <nav class="menu">
-            <a href="admin.php">Dashboard</a>
-            <a href="user.php">Users</a>
-            <a href="recruiters.php">Recruiters</a>
-            <a href="faq_admin.php" class="active">Manage FAQ</a>
+    <a href="admin.php" class="active">Dashboard</a>
+    <a href="user.php">Users </a>
+    <a href="recruiters.php" > Recruiters</a>
+    
+    <a href="faq_admin.php">FAQ'S</a>
+    <a href="add_testimonial.php">Emp Review</a>
+    <a href="booking_admin.php">Booking Request</a>
         </nav>
     </aside>
 
