@@ -49,7 +49,7 @@
         <span>and blur those hassles of a hiring marketplace. We understand the challenges inherent in the hiring</span>
         <span>process. we as a company have more than two decades of experience in human resource management</span>
         <span>and hiring services. Our intensive and standardized assessment processes will assist you in finding the</span>
-        <span>right candidate. We have a great deal of experience hiring for India, Singapore, and Australia.</span>
+        <span>right candidate. We have a great deal of experience hiring for India.</span>
       </p>
     </div>
 
