@@ -16,6 +16,34 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* Force all main sections to have a white background */
+.section, footer, .section-container, .cta-card {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+}
+
+/* HERO TEXT BOX – WHITE BACKGROUND */
+#text {
+  max-width: 800px;
+  margin: 40px auto 100px;
+  padding: 40px;
+
+  background: #ffffff !important;   /* 👈 real white */
+  color: #111111 !important;
+
+  border: 2px solid #22d3ee;
+  border-radius: 12px;
+
+  text-align: center;
+  line-height: 1.8;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+#text span {
+  color: #222222 !important;
+}
+
 /* ==
 
 =============== NAVBAR ================= */
@@ -106,6 +134,7 @@ html {
 
 /* ================= HERO ================= */
 .hero {
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,6 +218,9 @@ html {
 }
 
 .slide-track {
+  position: relative;
+  margin-bottom: 100px;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -246,13 +278,15 @@ html {
 
 
 .section-container {
+  background-color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   padding: 60px;
   position: relative;
-  margin-top: -45%;
+  margin-top: 10%;
   margin-bottom: 5%;
 }
 
@@ -405,8 +439,8 @@ html {
 
 .services-section {
   padding: 80px 8%;
-  background-color: #0b0b0b;
-  color: #fff;
+  background-color: white;
+  color: black;
   position: relative;
   margin-top: 0%;
   margin-bottom: 6%;
@@ -1045,3 +1079,155 @@ main {
   color: var(--text-muted);
 }
 
+
+/* Footer Styling */
+.main-footer {
+    background: #1a1a1a; /* Dark background for contrast */
+    color: #ffffff;
+    padding: 5rem 2rem 2rem;
+    margin-top: 4rem;
+    font-family: inherit;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 4rem;
+}
+
+/* Brand Section */
+.footer-brand .footer-logo {
+    height: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand p {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer Headers */
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    position: relative;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 2px;
+    background: var(--success, #00d1b2);
+}
+
+/* Links & Lists */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 8px;
+}
+
+/* Newsletter/CTA */
+.footer-newsletter p {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 0.8rem;
+    border-radius: var(--radius, 8px);
+    border: 1px solid #333;
+    background: #252525;
+    color: white;
+    flex: 1;
+}
+
+.newsletter-form button {
+    padding: 0.8rem 1.2rem;
+    background: var(--success, #00d1b2);
+    border: none;
+    border-radius: var(--radius, 8px);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    filter: brightness(1.1);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    color: #777;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--success, #00d1b2);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 580px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}

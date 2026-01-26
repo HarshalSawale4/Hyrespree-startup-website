@@ -79,12 +79,6 @@
   </div>
 </section>
 
-<br>
-<br>
-<br>  
-<br>
-
-
 <div id="about" class="section-container">
   <div class="left-content">
     <ul>
